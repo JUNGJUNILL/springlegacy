@@ -12,7 +12,7 @@ public class BookController {
 	@RequestMapping(value="/create", method = RequestMethod.GET)
 	public ModelAndView create() {
 		System.out.println("æ»≥Á«œººø‰!");
-	    return new ModelAndView("/create");
+	    return new ModelAndView("/book/create");
 	}
 	
 }
