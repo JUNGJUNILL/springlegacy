@@ -113,7 +113,7 @@ public class BookController {
 	            
 	            System.out.println(key + " : " + value);
 	        }
-		System.out.println("hello");
+		System.out.println("hello~");
 		mav.addObject("data",list); 
 		mav.setViewName("/book/list");
 		mav.addObject("keyword", map.get("keyword")); 
