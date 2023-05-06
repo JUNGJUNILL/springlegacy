@@ -21,7 +21,7 @@
 <a href="/book/list">책 리스트</a></br>
 <c:if test="${userid!=null}">
 <a href="/board/write">게시판 글 작성</a></br>
-</c:if>
+</c:if>	
 <a href="/board/list">게시판 글 리스트</a></br>
 </body>  
 </html>  
