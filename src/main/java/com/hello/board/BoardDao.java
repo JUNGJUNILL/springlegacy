@@ -23,6 +23,13 @@ public class BoardDao {
 		return this.sqlSessionTemplate.selectList("board.select_list",map); 
 	}
 	
+	//게시글 하나조회
+	public Map<String,Object> viewDetail(int bno){
+		
+		return this.sqlSessionTemplate.selectOne("board.view_Detail",bno); 
+	}
+	
+	
 
 
 }

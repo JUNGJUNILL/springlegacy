@@ -14,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping(value="/board")
 public class BoardController {
 
-	
 	@Autowired
 	BoardService boardService;
 	
@@ -41,6 +40,19 @@ public class BoardController {
 		mav.setViewName("/board/list");
 		
 		return mav;
+	}
+	
+	//게시글 상세 보기
+	@RequestMapping(value="/view",method = RequestMethod.GET)
+	public ModelAndView view(@RequestParam Map<String,String> paramMap) {
+			ModelAndView mav =new ModelAndView(); 
+			int parambno = Integer.parseInt(paramMap.get("bno")); 
+			Map<String,Object> viewDetail = boardService.detailView(parambno); 
+			
+			mav.addObject("data",viewDetail); 
+			mav.setViewName("/board/view");
+		
+			return mav; 
 	}
 	
 	

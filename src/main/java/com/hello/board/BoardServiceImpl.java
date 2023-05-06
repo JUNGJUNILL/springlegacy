@@ -40,7 +40,16 @@ public class BoardServiceImpl implements BoardService{
 	public List<BoardDto> listAll(Map<String, Object> map) {
 		
 		return this.boardDao.selectAll(map); 
+	}
+
+	//게시글 하나조회
+	@Override
+	public Map<String,Object> detailView(int bno) {
+		
+		return this.boardDao.viewDetail(bno); 
 	} 
+	
+	
 	
 	
 	

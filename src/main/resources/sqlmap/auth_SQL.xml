@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE  mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="board">
+<mapper namespace="auth">
 
 <insert id="insert"  parameterType="hashMap">
            <![CDATA[
@@ -22,24 +22,16 @@
        ]]>
 </insert>
 
-<select id="select_list" parameterType="hashMap" resultType="com.hello.board.BoardDto">  
+<select id="select_one" parameterType="hashMap" resultType="com.hello.auth.AuthVO">  
 	<![CDATA[  
 	select  
 		* 
-	from  tbl_board  
+	from  mvc_user  
+	where userid=#{userid}
 	]]>  
 	
 </select>  
 
-<select id="view_Detail" parameterType="int" resultType="hashMap">  
-	<![CDATA[  
-	select  
-		* 
-	from  tbl_board
-	where bno=#{bno}  
-	]]>  
-	
-</select>  
 
 
 
