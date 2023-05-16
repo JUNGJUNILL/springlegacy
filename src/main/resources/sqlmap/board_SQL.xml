@@ -25,7 +25,13 @@
 <select id="select_list" parameterType="hashMap" resultType="com.hello.board.BoardDto">  
 	<![CDATA[  
 	select  
-		* 
+		 bno
+		,title	
+		,content
+		,writer
+		,viewcnt
+		,insert_Date
+		,modifier_Date
 	from  tbl_board  
 	]]>  
 	
